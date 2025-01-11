@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: black;
+      }
+      .button {
+        position: relative;
+        background-color: transparent;
+        height: 40px;
+        width: 90px;
+        color: aliceblue;
+        border: none;
+        outline: 1px solid #f8f6f8;
+        text-transform: capitalize;
+        border-radius: 4px;
+        transition: 1s ease;
+      }
+      button:hover {
+        background-color: #fffdff;
+        color: rgb(0, 2, 2);
+        /* transition: 1s ease; */
+        font-weight: bold;
+        cursor: pointer;
+      }
+      button::before {
+        content: "";
+        position: absolute;
+        height: 40px;
+        width: 90px;
+        background-color: transparent;
+        top: 80%;
+        left: 0%;
+        transform: perspective(1em) rotateX(40deg) scale(1, 0.35);
+        transition: 1s ease;
+        filter: blur(1em);
+      }
+      button:hover::before {
+        top: 120%;
+        background-color: #fcf9fb;
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="press()" class="button">Light it</button>
+
+
+    <script>
+      function press(){
+        document.querySelector("button").addEventListener("click",function(){
+        window.location.href ="http://127.0.0.1:5500/javascript/Flipcard.html"
+        })
+        
+      }
+    </script>
+  </body>
+</html>

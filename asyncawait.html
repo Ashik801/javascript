@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function fbreq(college) {
+        return new Promise((resolve, reject) => {
+          if (college === "KEC") {
+            setTimeout(resolve, 3000, "hi friend");
+          } else {
+            reject("sorry");
+          }
+        });
+      }
+
+      function fbresp(resp) {
+        return new Promise((resolve, reject) => {
+          if (resp === "hi friend") {
+            resolve(`received msg ${resp} which dept are you`);
+          } else {
+            reject("mind your words");
+          }
+        });
+      }
+      async function dowork() {
+        try {
+          const reqstat = await fbreq("KEC");
+          console.log(reqst)
+        
+          const reply = await fbresp(reqstat);
+          console.log(reply);
+        } catch (error) {
+          console.log(error);
+        }
+      }
+      dowork();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: Georgia, "Times New Roman", Times, serif;
+        background-color: black;
+        color: black;
+        display: grid;
+        place-content: center;
+        height: 100vh; /* Ensure full height for centering */
+        margin: 0;
+      }
+
+      .card {
+        width: 200px;
+        height: 250px;
+        perspective: 800px;
+      }
+
+      .card__inner {
+        position: relative;
+        height: 100%;
+        transform-style: preserve-3d;
+        transition: transform 0.5s;
+      }
+
+      .card:hover .card__inner {
+        transform: rotateY(180deg);
+      }
+
+      .card__body {
+        position: absolute;
+        inset: 0;
+        display: grid;
+        place-items: center;
+        backface-visibility: hidden;
+        border-radius: 8px;
+        box-shadow: 0 5px 10px rgba(253, 0, 0, 0.15);
+      }
+
+      .card__body--front {
+        background-image: radial-gradient(
+          circle 248px at center,
+          rgb(74, 131, 74) 0%,
+          rgb(55, 155, 55) 47%,
+          green 100%
+        );
+      }
+
+      .card__body--back {
+        background-image: radial-gradient(
+          60deg,
+          rgb(59, 143, 168) 14%,
+          rgba(255, 41, 232, 0.79) 57%,
+          red 89%
+        );
+        background: #fff;
+        color: #000; /* Ensure text is visible */
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="card">
+      <div class="card__inner">
+        <!-- Front side of the card -->
+        <div class="card__body card__body--front">
+          <h2>Front</h2>
+        </div>
+        
+        <!-- Back side of the card -->
+        <div class="card__body card__body--back">
+          <h2>Back</h2>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>

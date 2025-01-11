@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background: black;
+        background: linear-gradient(90deg, black, rgb(6, 231, 220));
+      }
+      .container {
+        font-family: Georgia, "Times New Roman", Times, serif;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+        font-size: 3rem;
+      }
+      .wrapper {
+        border: 1px solid;
+      }
+      .cont2{
+        border: 1px solid;
+        
+      }
+      
+
+    
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="wrapper">
+        <span id="hours">00</span>
+        <span>:</span>
+        <span id="minutes">00</span>
+        <span>:</span>
+        <span id="sec">00</span>
+        <span id="ampm">AM</span>
+        <div class="cont2">
+          <span id="date"></span>
+          <span>-</span>
+          <span id="month"></span>
+          <span>-</span>
+          <span id="year"></span>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    let ampm = document.getElementById("ampm");
+    function displayTime() {
+      let dateTime = new Date();
+      let hr = dateTime.getHours();
+      let min = dateTime.getMinutes()+11;
+      let sec = dateTime.getSeconds();
+      let date = dateTime.getDate();
+      let month = dateTime.getMonth() + 1;
+      let year = dateTime.getFullYear();
+      if (hr > 12) {
+        hr = hr - 12;
+        ampm.innerHTML = "PM";
+      }
+
+      document.getElementById("hours").innerHTML = padzero(hr);
+      document.getElementById("minutes").innerHTML = padzero(min);
+      document.getElementById("sec").innerHTML = padzero(sec);
+      document.getElementById("date").innerHTML = date;
+      document.getElementById("month").innerHTML = month;
+      document.getElementById("year").innerHTML = year;
+    }
+    setInterval(displayTime, 100);
+
+    function padzero(num) {
+      return num < 10 ? "0" + num : num;
+    }
+  </script>
+</html>
