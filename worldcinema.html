@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      background-color: black;
+      padding: 0;
+      margin: 0;
+      font-family: Georgia, "Times New Roman", Times, serif;
+    }
+    .navbar {
+      background-color: rgb(253, 253, 253);
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 10px 20px;
+      position: fixed;
+      width: 100%;
+    }
+    nav li {
+      display: inline-block;
+      margin: 0 25px;
+    }
+    .logo {
+      font-size: 20px;
+      font-weight: bolder;
+    }
+    nav a {
+      text-decoration: none;
+      color: black;
+    }
+    nav a:hover {
+      color: rgb(9, 70, 150);
+    }
+    div a {
+      color: rgb(9, 70, 150);
+    }
+    .menu-line {
+      height: 2px;
+      width: 18px;
+      background-color: black;
+      margin-bottom: 3px;
+    }
+    .menu {
+      cursor: pointer;
+      display: none;
+    }
+    nav li {
+      position: sticky;
+    }
+    @media all and (max-width: 640px) {
+      nav {
+        flex-direction: column;
+      }
+      nav li {
+        display: block;
+        padding: 10px 0px;
+      }
+      ul {
+        text-align: center;
+        padding: 0;
+        display: none;
+      }
+      .logo {
+        align-self: flex-start;
+        margin: 5px 0px 0px 10px;
+      }
+      .menu {
+        display: block;
+        position: absolute;
+        top: 18px;
+        right: 20px;
+      }
+      .showmenu {
+        display: block;
+      } 
+    }
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      /* column-gap: 20px;
+      row-gap: 20px; */
+      gap: 20px;
+    }
+
+    .para {
+      color: aliceblue;
+      padding: 1rem;
+      font-family: Georgia, "Times New Roman", Times, serif;
+      background-color: rgb(24, 23, 23);
+      border-radius: 10px;
+      display: grid;
+      grid-template-rows: subgrid;
+      grid-row: span 3;
+    }
+    .para img {
+      width: 100%;
+      height: auto; /* Maintains the aspect ratio */
+      border-radius: 10px; /* Optional: rounded corners */
+      object-fit: cover;
+    }
+    h2 {
+      color: rgb(20, 146, 219);
+    }
+   
+
+        
+    
+  </style>
+  <body>
+    <nav class="navbar">
+      <div class="logo"><a href="#">World Product</a></div>
+      <ul>
+        <li ><a href="https://www.youtube.com/watch?v=XRetgAOmNyE">NATURE</a></li>
+        <li><a href="series">WATER</a></li>
+        <li><a href="yourlibrary">Your Library</a></li>
+        <li><a href="about">About</a></li>
+        <span></span>
+      </ul>
+      <div class="menu">
+        <div class="menu-line"></div>
+        <div class="menu-line"></div>
+        <div class="menu-line"></div>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="para">
+        <h2>The Title</h2>
+        <p>
+          this is the movie plot area you can read the plot and know the story
+          of movie
+        </p>
+        <img src="https://picsum.photos/1200?1" alt="" />
+      </div>
+      <div class="para">
+        <h2>The Title</h2>
+        <p>
+          this is the movie plot area you can read the plot and know the story
+          of movie this is the movie plot area you can read the plot and know
+          the story of movie this is the movie plot area you can read the plot
+          and know the story of movie this is the movie plot area you can read
+          the plot and know the story of movie this is the movie plot area you
+          can read the plot and know the story of movie
+        </p>
+        <img src="https://picsum.photos/1200?2" alt="" />
+      </div>
+      <div class="para">
+        <h2>The Title</h2>
+        <p>
+          this is the movie plot area you can read the plot and know the story
+          of moviethis is the movie plot area you can read the plot and know the
+          story of movie
+        </p>
+        <img src="https://picsum.photos/1200?3" alt="" />
+      </div>
+      <div class="para">
+        <h2>The Title</h2>
+        <p>
+          this is the movie plot area you can read the plot and know the story
+          of movie
+        </p>
+        <img src="https://picsum.photos/1200?4" alt="" />
+      </div>
+      <div class="para">
+        <h2>The Title</h2>
+        <p>
+          this is the movie plot area you can read the plot and know the story
+          of movie
+        </p>
+        <img src="https://picsum.photos/1200?5" alt="" />
+      </div>
+      <div class="para">
+        <h2>The Title</h2>
+        <p>
+          this is the movie plot area you can read the plot and know the story
+          of movie
+        </p>
+        <img src="https://picsum.photos/1200?6" alt="" />
+      </div>
+      <div class="para">
+        <h2>The Title</h2>
+        <p>
+          this is the movie plot area you can read the plot and know the story
+          of movie
+        </p>
+        <img src="https://picsum.photos/1200?7" alt="" />
+      </div>
+      <div class="para">
+        <h2>The Title</h2>
+        <p>
+          this is the movie plot area you can read the plot and know the story
+          of movie
+        </p>
+        <img src="https://picsum.photos/1200?8" alt="" />
+      </div>
+      <div class="para">
+        <h2>The Title</h2>
+        <p>
+          this is the movie plot area you can read the plot and know the story
+          of movie
+        </p>
+        <img src="https://picsum.photos/1200?9" alt="" />
+      </div>
+      <div class="para">
+        <h2>The Title</h2>
+        <p>
+          this is the movie plot area you can read the plot and know the story
+          of movie
+        </p>
+        <img src="https://picsum.photos/1200?10" alt="" />
+      </div>
+      <div class="para">
+        <h2>The Title</h2>
+        <p>this is the movie plot area</p>
+        <img src="https://picsum.photos/1200?11" alt="" />
+      </div>
+    </div>
+  </body>
+  <script>
+    const menu = document.querySelector(".menu");
+    const menuList = document.querySelector("nav ul");
+    menu.addEventListener("click", () => {
+      menuList.classList.toggle("showmenu");
+    });
+
+    function click(page) {
+      // const movie = document.querySelector("movie");
+      window.location.href = page;
+    }
+  </script>
+</html>

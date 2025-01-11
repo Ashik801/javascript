@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: #000;
+      }
+      nav {
+        position: relative;
+        width: 524px;
+        height: 50px;
+        background: #1f1d1d;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      nav a{
+        position: relative;
+        display: inline-block;
+        /* font-size: 1em; */
+        font-weight: bold;
+        color: aliceblue;
+        text-decoration: none;
+        padding: 0 50px;
+        z-index: 1;
+      }
+      nav span{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 90px;
+        height: 100%;
+        background: linear-gradient(45deg, rgb(9, 9, 20),rgb(0, 255, 55));
+        border-radius: 10px;
+        transition: 0.5s;
+      }
+      nav a:nth-child(1):hover~span{
+        left: 0;
+        width: 100px;
+      }
+      nav a:nth-child(2):hover~span{
+        left: 135px;
+        width: 100px;
+      }
+      nav a:nth-child(3):hover~span{
+        left: 285px;
+        width: 100px;
+      }
+      nav a:nth-child(4):hover~span{
+        left: 420px;
+        width: 110px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div>
+      <nav>
+        <a href="">Home</a>
+        <a href="">Product</a>
+        <a href="">Brand</a>
+        <a href="">About</a>
+        <span></span>
+      </nav>
+    </div>
+  </body>
+</html>
